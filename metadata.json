@@ -1,0 +1,5 @@
+{
+  "name": "Delivery Tracker",
+  "description": "Real-time delivery tracking dashboard featuring shipment status, driver details, and timeline.",
+  "requestFramePermissions": []
+}

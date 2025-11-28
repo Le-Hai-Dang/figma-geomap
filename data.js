@@ -1,11 +1,12 @@
 // Dữ liệu cho ứng dụng Delivery Tracker
 
 const DELIVERY_STATUS = {
-  time: "9:10 Sáng",
-  description: "Tài xế đang đến Warehouse, 2 Phan Đình Giót, Phường 2, Tân Bình, Thành phố Hồ Chí Minh",
-  progress: 45,
-  currentStop: 2, // Đang ở điểm dừng thứ 2 (heading to point 2)
-  isStopped: true,
+  time: "11:45 Sáng",
+  description: "Đã giao hàng thành công",
+  progress: 100,
+  currentStop: 3, // Đã hoàn thành điểm dừng thứ 3
+  isStopped: false,
+  isCompleted: true, // Flag để hiển thị icon check
 };
 
 const DRIVER_INFO = {
@@ -36,13 +37,13 @@ const TIMELINE_STEPS = [
     id: 2,
     title: "Warehouse",
     address: "2 Phan Đình Giót, Phường 2, Tân Bình, Thành phố Hồ Chí Minh",
-    status: 'active', // Đang tiến đến
+    status: 'completed', // Đã hoàn thành
   },
   {
     id: 3,
     title: "Công ty Sharemap",
     address: "482/51/35 Lê Quang Định, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",
-    status: 'pending', // Chưa đến
+    status: 'completed', // Đã hoàn thành
   },
 ];
 

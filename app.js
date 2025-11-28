@@ -9,8 +9,10 @@ function renderDeliveryStatusCard(status) {
   // Generate segments for the progress bar
   let segmentsHTML = '';
   for (let i = 1; i <= totalSegments; i++) {
-    const isCompleted = i < currentStop;
-    const isCurrent = i === currentStop;
+    // If delivery is complete (currentStop >= totalSegments and not stopped), all segments are completed
+    const isDeliveryComplete = currentStop >= totalSegments && !status.isStopped;
+    const isCompleted = i < currentStop || (i === currentStop && isDeliveryComplete);
+    const isCurrent = i === currentStop && status.isStopped;
     const segmentClass = isCompleted ? 'completed' : (isCurrent ? 'current' : 'pending');
 
     segmentsHTML += `
@@ -31,7 +33,10 @@ function renderDeliveryStatusCard(status) {
       <div class="status-header">
         <div class="status-info">
           <h2>${status.time}</h2>
-          <p>${status.description}</p>
+          <p>
+            ${status.isCompleted ? '<span class="material-icons status-check-icon">check_circle</span>' : ''}
+            ${status.description}
+          </p>
         </div>
       </div>
       

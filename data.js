@@ -11,7 +11,7 @@ const DELIVERY_STATUS = {
 const DRIVER_INFO = {
   name: "Driver Hải Đăng",
   rating: 5.0,
-  vehicle: "Suzuki",
+  vehicle: "Toyota",
   plateNumber: "59P3-327.94",
   avatarUrl: "avt_default.png",
 };

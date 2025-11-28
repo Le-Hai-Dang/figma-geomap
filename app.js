@@ -125,7 +125,7 @@ function renderTimeline(steps) {
     }
 
     return `
-      <div class="timeline-bullet ${bulletClass}">${step.id}</div>
+      <div class="timeline-bullet timeline-bullet-${index + 1} ${bulletClass}">${step.id}</div>
       ${!isLast ? '<div class="timeline-connector"></div>' : ''}
     `;
   }).join('');

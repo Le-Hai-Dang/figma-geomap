@@ -226,7 +226,14 @@ body {
   padding: var(--spacing-4);
   border-radius: 12px;
   border: 1px solid var(--slate-200);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12),
+    0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .card-alt {
@@ -234,6 +241,8 @@ body {
   padding: var(--spacing-4);
   border-radius: 12px;
   border: 1px solid var(--slate-200);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
 /* Status Card with Reload Button */
@@ -767,35 +776,60 @@ body {
   justify-content: flex-start;
 }
 
-/* Individual alignment for each item */
+/* Individual alignment for each item - Mobile */
 .timeline-item-1 {
-  padding-top: 7px;
+  margin-top: 0;
 }
 
 .timeline-item-2 {
-  padding-top: 8px;
+  margin-top: 0;
 }
 
 .timeline-item-3 {
-  padding-top: 10px;
+  margin-top: 0;
+}
+
+/* Bullet adjustments to compensate for item margin */
+.timeline-bullet-1 {
+  margin-top: 0;
+}
+
+.timeline-bullet-2 {
+  margin-top: 0;
+}
+
+.timeline-bullet-3 {
+  margin-top: 0;
 }
 
 /* Desktop adjustments */
 @media (min-width: 640px) {
   .timeline-item-1 {
-    padding-top: 8px;
+    margin-top: 0;
+  }
+
+  .timeline-bullet-1 {
+    margin-top: 0;
   }
 }
 
 @media (min-width: 640px) {
   .timeline-item-2 {
-    padding-top: 9px;
+    margin-top: 0;
+  }
+
+  .timeline-bullet-2 {
+    margin-top: 0;
   }
 }
 
 @media (min-width: 640px) {
   .timeline-item-3 {
-    padding-top: 11px;
+    margin-top: 0;
+  }
+
+  .timeline-bullet-3 {
+    margin-top: 0;
   }
 }
 
@@ -835,8 +869,15 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: calc(100% - var(--spacing-2));
-  border: none;
-  box-shadow: none;
+  border: 1px solid var(--slate-200);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
+}
+
+.tracking-card-wrapper:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12),
+    0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .tracking-card {
